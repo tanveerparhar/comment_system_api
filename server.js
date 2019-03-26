@@ -42,6 +42,6 @@ app.post('/comment/:id',(req,res)=> {comment.handleComment(req,res,db)
 app.get('/sortRecent', (req,res)=> { sortRecent.handleSort(req,res,db)
 });
 
-app.listen(3000,()=> {
-	console.log('app is running on port 3000');
+app.listen(process.env.PORT || 3000,()=> {
+	console.log(`app is running on port ${process.env.PORT}`);
 });
